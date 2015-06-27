@@ -4,6 +4,7 @@ RSpec.describe Order, type: :model do
   it { should belong_to(:user) }
   it { should validate_presence_of(:address) }
   it { should validate_presence_of(:email) }
+  it { should have_one(:cart) }
 
   describe 'email validations' do
     subject { Order.create(email: 'goodemail@example.com', address: 'address') }
