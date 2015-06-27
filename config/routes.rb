@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :products, only: [:index, :show]
+
+  resources :categories, only: [:index, :show] do
+    resources :products, only: [:index, :show]
+  end
+
   root 'static_pages#index'
   ActiveAdmin.routes(self)
   devise_for :users
