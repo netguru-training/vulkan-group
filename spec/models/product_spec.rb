@@ -12,4 +12,28 @@ RSpec.describe Product, :type => :model do
 
   it { should belong_to(:category) }
 
+  describe '#price' do
+    let(:product) { Product.new(
+      name: "Glass",
+      description: "Test description",
+      stock: 2
+    )}
+
+    it 'is limited to two decimal places' do
+      product.price = 9.999
+      expect(product.save).to be_falsey
+    end
+ 
+    it 'is greater than or equal to 0.01' do
+      product.price = 5
+      expect(product.save).to be_truthy
+    end
+
+    it 'is not lower than 0.01' do
+      product.price = -55
+      expect(product.save).to be_falsey
+    end
+
+  end
+
 end
