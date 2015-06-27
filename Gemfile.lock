@@ -61,15 +61,12 @@ GEM
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-<<<<<<< HEAD
     bootstrap-sass (3.3.5.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
-=======
     bourbon (4.2.3)
       sass (~> 3.4)
       thor
->>>>>>> Active admin basic config
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
@@ -143,15 +140,12 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
-    parser (2.2.2.3)
+    parser (2.2.2.5)
       ast (>= 1.1, < 3.0)
     pg (0.18.2)
-<<<<<<< HEAD
-    powerpack (0.1.1)
-=======
     polyamorous (1.2.0)
       activerecord (>= 3.0)
->>>>>>> Active admin basic config
+    powerpack (0.1.1)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -207,9 +201,9 @@ GEM
       rspec-mocks (~> 3.3.0)
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
-    rubocop (0.31.0)
+    rubocop (0.32.1)
       astrolabe (~> 1.3)
-      parser (>= 2.2.2.1, < 3.0)
+      parser (>= 2.2.2.5, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.4)
@@ -258,11 +252,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
-  bootstrap-sass (~> 3.3.5)
-=======
   activeadmin (~> 1.0.0.pre1)
->>>>>>> Active admin basic config
+  bootstrap-sass (~> 3.3.5)
   byebug
   coffee-rails (~> 4.1.0)
   devise
@@ -282,3 +273,6 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+
+BUNDLED WITH
+   1.10.5
