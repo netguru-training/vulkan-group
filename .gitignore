@@ -18,3 +18,5 @@
 
 # Ignore weird OS X files
 .DS_Store
+
+public/uploads
