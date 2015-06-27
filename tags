@@ -1,0 +1,55 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AddCategoryIdToProducts	db/migrate/20150627101154_add_category_id_to_products.rb	/^class AddCategoryIdToProducts < ActiveRecord::Migration$/;"	c
+AddNameToUsers	db/migrate/20150627065756_add_name_to_users.rb	/^class AddNameToUsers < ActiveRecord::Migration$/;"	c
+AddUserRefToOrder	db/migrate/20150627101655_add_user_ref_to_order.rb	/^class AddUserRefToOrder < ActiveRecord::Migration$/;"	c
+AdminUser	app/models/admin_user.rb	/^class AdminUser < ActiveRecord::Base$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Vulkan
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Cart	app/models/cart.rb	/^class Cart < ActiveRecord::Base$/;"	c
+Category	app/models/category.rb	/^class Category < ActiveRecord::Base$/;"	c
+Coupon	app/models/coupon.rb	/^class Coupon < ActiveRecord::Base$/;"	c
+CouponsController	app/controllers/coupons_controller.rb	/^class CouponsController < ApplicationController$/;"	c
+CreateActiveAdminComments	db/migrate/20150627085248_create_active_admin_comments.rb	/^class CreateActiveAdminComments < ActiveRecord::Migration$/;"	c
+CreateCarts	db/migrate/20150627090142_create_carts.rb	/^class CreateCarts < ActiveRecord::Migration$/;"	c
+CreateCategories	db/migrate/20150627084825_create_categories.rb	/^class CreateCategories < ActiveRecord::Migration$/;"	c
+CreateCoupons	db/migrate/20150627091533_create_coupons.rb	/^class CreateCoupons < ActiveRecord::Migration$/;"	c
+CreateOrders	db/migrate/20150627085557_create_orders.rb	/^class CreateOrders < ActiveRecord::Migration$/;"	c
+CreateProducts	db/migrate/20150627083852_create_products.rb	/^class CreateProducts < ActiveRecord::Migration$/;"	c
+DeviseCreateAdminUsers	db/migrate/20150627085246_devise_create_admin_users.rb	/^class DeviseCreateAdminUsers < ActiveRecord::Migration$/;"	c
+DeviseCreateUsers	db/migrate/20150627065748_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+Order	app/models/order.rb	/^class Order < ActiveRecord::Base$/;"	c
+Product	app/models/product.rb	/^class Product < ActiveRecord::Base$/;"	c
+StaticPagesController	app/controllers/static_pages_controller.rb	/^class StaticPagesController < ApplicationController$/;"	c
+StaticPagesHelper	app/helpers/static_pages_helper.rb	/^module StaticPagesHelper$/;"	m
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+Vulkan	config/application.rb	/^module Vulkan$/;"	m
+admin_only	app/controllers/coupons_controller.rb	/^    def admin_only$/;"	f	class:CouponsController
+change	db/migrate/20150627065748_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20150627065756_add_name_to_users.rb	/^  def change$/;"	f	class:AddNameToUsers
+change	db/migrate/20150627083852_create_products.rb	/^  def change$/;"	f	class:CreateProducts
+change	db/migrate/20150627084825_create_categories.rb	/^  def change$/;"	f	class:CreateCategories
+change	db/migrate/20150627085246_devise_create_admin_users.rb	/^  def change$/;"	f	class:DeviseCreateAdminUsers
+change	db/migrate/20150627085557_create_orders.rb	/^  def change$/;"	f	class:CreateOrders
+change	db/migrate/20150627090142_create_carts.rb	/^  def change$/;"	f	class:CreateCarts
+change	db/migrate/20150627091533_create_coupons.rb	/^  def change$/;"	f	class:CreateCoupons
+change	db/migrate/20150627101154_add_category_id_to_products.rb	/^  def change$/;"	f	class:AddCategoryIdToProducts
+change	db/migrate/20150627101655_add_user_ref_to_order.rb	/^  def change$/;"	f	class:AddUserRefToOrder
+coupon_params	app/controllers/coupons_controller.rb	/^    def coupon_params$/;"	f	class:CouponsController
+create	app/controllers/coupons_controller.rb	/^  def create$/;"	f	class:CouponsController
+destroy	app/controllers/coupons_controller.rb	/^  def destroy$/;"	f	class:CouponsController
+down	db/migrate/20150627085248_create_active_admin_comments.rb	/^  def self.down$/;"	F	class:CreateActiveAdminComments
+edit	app/controllers/coupons_controller.rb	/^  def edit$/;"	f	class:CouponsController
+index	app/controllers/coupons_controller.rb	/^  def index$/;"	f	class:CouponsController
+index	app/controllers/static_pages_controller.rb	/^  def index$/;"	f	class:StaticPagesController
+migrate	db/migrate/20150627085246_devise_create_admin_users.rb	/^  def migrate(direction)$/;"	f	class:DeviseCreateAdminUsers
+new	app/controllers/coupons_controller.rb	/^  def new$/;"	f	class:CouponsController
+set_coupon	app/controllers/coupons_controller.rb	/^    def set_coupon$/;"	f	class:CouponsController
+show	app/controllers/coupons_controller.rb	/^  def show$/;"	f	class:CouponsController
+up	db/migrate/20150627085248_create_active_admin_comments.rb	/^  def self.up$/;"	F	class:CreateActiveAdminComments
+update	app/controllers/coupons_controller.rb	/^  def update$/;"	f	class:CouponsController
