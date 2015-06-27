@@ -23,8 +23,6 @@ group :development, :test do
   gem 'shoulda-matchers'
 end
 
-
-gem 'devise'
 gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
