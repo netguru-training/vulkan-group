@@ -1,4 +1,4 @@
 %h1= product.name
 %h2.pull-right= number_to_currency(product.price)
 %p= product.description
-%h3= product.category.name
+%h3= link_to product.category.name, category_path(product.category)

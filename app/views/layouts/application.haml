@@ -10,7 +10,7 @@
     %nav.navbar.navbar-default
       .container-fluid
         .navbar-header
-          %span.navbar-brand= link_to 'Nie mamy jeszcze nazwy ://', root_path
+          %span.navbar-brand Rails Store
 
         %ul.navbar-text.navbar-right.navbar-nav.nav
           - if user_signed_in?
@@ -22,4 +22,8 @@
             %li= link_to 'Sign up', new_user_registration_path, class: 'btn btn-success'
 
     .container-fluid.col-md-8.col-md-offset-2
+      - flash.each do |type, message|
+        %div{ class: "alert #{bootstrap_flash_class(type)} fade in" }
+          = message
+          %button.close{ data: { dismiss: 'alert' } } x
       = yield
