@@ -1,7 +1,6 @@
 class CouponsController < ApplicationController
   before_action :set_coupon, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-  before_action :admin_only
+  before_action :authenticate_admin_user!
 
   def index
     @coupons = Coupon.all
@@ -51,11 +50,7 @@ class CouponsController < ApplicationController
     end
 
     def coupon_params
-      params.require(:coupon).permit(:code, :user_id)
-    end
-
-    def admin_only
-      redirect_to root_path, alert: 'Access denied.' unless current_user.admin?
+      params.require(:coupon).permit(:code, :discount_percentage, :user_id)
     end
 
 end
