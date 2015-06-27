@@ -1,12 +1,12 @@
 #Users
-User.find_or create_by(name: 'Maria', email: 'maria@example.com', password: 'password', password_confirmation: 'password')
-User.find_or_create_by(name: 'Dominik', email: 'dominik@example.com', password: 'password', password_confirmation: 'password')
-User.find_or_create_by(name: 'Justyna', email: 'justyna@example.com', password: 'password', password_confirmation: 'password')
-User.find_or_create_by(name: 'Grzegorz', email: 'grzegorz@example.com', password: 'password', password_confirmation: 'password')
-User.find_or_create_by(name: 'Adam', email: 'adam@example.com', password: 'password', password_confirmation: 'password')
+User.create(name: 'Maria', email: 'maria@example.com', password: 'password', password_confirmation: 'password')
+User.create(name: 'Dominik', email: 'dominik@example.com', password: 'password', password_confirmation: 'password')
+User.create(name: 'Justyna', email: 'justyna@example.com', password: 'password', password_confirmation: 'password')
+User.create(name: 'Grzegorz', email: 'grzegorz@example.com', password: 'password', password_confirmation: 'password')
+User.create(name: 'Adam', email: 'adam@example.com', password: 'password', password_confirmation: 'password')
 
 #Admin user
-AdminUser.find_or_create_by(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+AdminUser.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
 #Categories
 vegetables = Category.find_or_create_by(name: 'Vegetables')
