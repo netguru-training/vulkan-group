@@ -22,20 +22,26 @@ class CouponsController < ApplicationController
 
   def create
     @coupon = Coupon.new(coupon_params)
-    @coupon.save
-    respond_with(@coupon)
+    if @coupon.save
+      redirect_to @coupon, notice: 'Coupon was successfully created.'
+    else
+      render action: 'new', alert: 'Error during coupon creation.'
+    end
   end
 
   def update
     @coupon = Coupon.find(params[:id])
     @coupon.attributes = coupon_params
-    @coupon.save
-    respond_with(@coupon)
+    if @coupon.save
+      redirect_to @coupon, notice: 'Coupon was successfully updated.'
+    else
+      render action: 'edit'
+    end
   end
 
   def destroy
     @coupon.destroy
-    respond_with(@coupon)
+    redirect_to @coupon, notice: 'Coupon was successfully destroyed.'
   end
 
   private
@@ -49,9 +55,7 @@ class CouponsController < ApplicationController
     end
 
     def admin_only
-      unless current_user.nil? && current_user.admin?
-        redirect_to root_path, alert: 'Access denied.'
-      end
+      redirect_to root_path, alert: 'Access denied.' unless current_user.admin?
     end
 
 end
