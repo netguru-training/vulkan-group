@@ -10,7 +10,7 @@ class Order < ActiveRecord::Base
             uniqueness: { case_sensitive: false }
 
   def total_price
-    self.products.sum(:price) if self.products.count != 0
+    products.sum(:price) if self.products.count > 0
   end
 
   def total_discount(discount_percentage)
