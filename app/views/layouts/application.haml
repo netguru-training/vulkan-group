@@ -1,0 +1,22 @@
+!!!
+%html{ lang: 'en' }
+  %head
+    %title Vulcan
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+
+    %nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          %span.navbar-brand= link_to 'Nie mamy jeszcze nazwy ://', root_path
+
+        %ul.navbar-text.navbar-right.navbar-nav.nav
+          - if user_signed_in?
+            %li= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'btn btn-danger'
+          - else
+            %li= link_to 'Log in', new_user_session_path, class: 'btn btn-info'
+            %li= link_to 'Sign up', new_user_registration_path, class: 'btn btn-success'
+
+    = yield
