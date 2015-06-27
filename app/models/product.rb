@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+  mount_uploader :image, ImageUploader
   belongs_to :category
   belongs_to :cart
   validates_presence_of :name, :description, :price, :stock
