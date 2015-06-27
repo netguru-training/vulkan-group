@@ -60,6 +60,13 @@ ActiveRecord::Schema.define(version: 20150627101154) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "coupons", force: :cascade do |t|
+    t.string   "code"
+    t.integer  "discount_percentage"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "orders", force: :cascade do |t|
     t.text     "address",    null: false
     t.string   "email",      null: false
