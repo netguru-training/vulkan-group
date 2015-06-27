@@ -4,7 +4,8 @@ class Order < ActiveRecord::Base
 
   validates_presence_of :address, :email
 
-  validates :email, length: { maximum: 50 },
-    format: { with: /\A[\w+\-.]+@[a-z\d\-.]+[a-z]+\z/i },
-    uniqueness: { case_sensitive: false }
+  validates :email,
+            length: { maximum: 50 },
+            format: { with: /\A[\w+\-.]+@[a-z\d\-.]+[a-z]+\z/i },
+            uniqueness: { case_sensitive: false }
 end
