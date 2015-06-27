@@ -36,4 +36,27 @@ RSpec.describe Product, :type => :model do
 
   end
 
+  describe '#stock' do
+    let(:product) { Product.new(
+      name: "Glass",
+      description: "Test description",
+      price: 11.11,
+    )}
+
+    it 'is limited to positive integer value' do
+      product.stock = -1
+      expect(product.save).to be_falsey
+
+      product.stock = 0.0
+      expect(product.save).to be_falsey
+
+      product.stock = 1.1
+      expect(product.save).to be_falsey
+
+      product.stock = 2
+      expect(product.save).to be_truthy
+    end
+
+  end
+
 end
