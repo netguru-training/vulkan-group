@@ -25,12 +25,12 @@ RSpec.describe Product, type: :model do
       expect(product.save).to be_falsey
     end
 
-    it 'is greater than or equal to 0.01' do
+    it 'is greater than or equal to 0' do
       product.price = 5
       expect(product.save).to be_truthy
     end
 
-    it 'is not lower than 0.01' do
+    it 'is not lower than 0' do
       product.price = -55
       expect(product.save).to be_falsey
     end
