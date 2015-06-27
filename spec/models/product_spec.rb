@@ -10,6 +10,7 @@ RSpec.describe Product, type: :model do
   it { should validate_numericality_of(:stock) }
 
   it { should belong_to(:category) }
+  it { should belong_to(:cart) }
 
   describe 'price' do
     let(:product) {
