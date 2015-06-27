@@ -19,6 +19,10 @@ class Product < ActiveRecord::Base
 
   private
 
+    def self.random_products
+      order("RANDOM()").first(3)
+    end
+
     def image_size
       upload_limit = 1
       msg = "You cannot upload a file greater than #{upload_limit}MB"
