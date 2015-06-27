@@ -13,6 +13,10 @@ class Product < ActiveRecord::Base
 
   validate :image_size
 
+  def available?
+    stock > 0
+  end
+
   private
 
     def image_size

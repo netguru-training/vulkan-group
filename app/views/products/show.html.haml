@@ -1,4 +1,10 @@
-%h1= product.name
-%h2.pull-right= number_to_currency(product.price)
-%p= product.description
-%h3= link_to product.category.name, category_path(product.category)
+.panel.panel-danger
+  .panel-heading
+    %h3.panel-title= product.name
+  .panel-body
+    .col-md-6= image_tag product.image, size: '300x300'
+    .row
+      = product.description
+      %h2= number_to_currency(product.price)
+      - if product.available?
+        = link_to 'Add to Cart', '#', class: 'btn btn-danger'
