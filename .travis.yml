@@ -1,5 +1,5 @@
 rvm:
-  - 2.1.5
+  - 2.2.1
 before_script:
   - psql -c 'create database vulkan-group_test;' -U postgres
 addons:

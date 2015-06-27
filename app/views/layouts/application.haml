@@ -19,7 +19,5 @@
             %li= link_to 'Log in', new_user_session_path, class: 'btn btn-info'
             %li= link_to 'Sign up', new_user_registration_path, class: 'btn btn-success'
 
-    .container-fluid
-      = render 'layouts/carousel'
-
-    = yield
+    .container-fluid.col-md-8.col-md-offset-2
+      = yield

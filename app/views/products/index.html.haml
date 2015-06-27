@@ -1,0 +1,14 @@
+%h1 All products
+
+%table.table.table-striped
+  %tr
+    %th Product name
+    %th Description
+    %th Price
+    %th Category
+  - products.each do |product|
+    %tr
+      %td= link_to product.name, product_path(product)
+      %td= truncate(product.description, separator: ' ')
+      %td= number_to_currency(product.price)
+      %td= product.category.name

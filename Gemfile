@@ -11,7 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'rubocop', require: false
 # bundle exec rake doc:rails generates the API under doc/api.
-
+gem 'decent_exposure', '~> 2.3.2'
 
 
 # Use ActiveModel has_secure_password
