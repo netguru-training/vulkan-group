@@ -11,6 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//
+
+$('.carousel-control.left').click(function() {
+  $('#myCarousel').carousel('prev');
+});
+
+$('.carousel-control.right').click(function() {
+  $('#myCarousel').carousel('next');
+});
