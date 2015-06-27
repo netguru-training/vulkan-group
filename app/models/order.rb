@@ -1,6 +1,6 @@
 class Order < ActiveRecord::Base
-  has_many :products
   belongs_to :user
+  has_many :carts
 
   validates_presence_of :address, :email
 
