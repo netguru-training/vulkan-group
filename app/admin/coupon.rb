@@ -1,3 +1,3 @@
 ActiveAdmin.register Coupon do
-  permit_params :code, :discount_percentage
+  permit_params :discount_percentage, :code
 end
