@@ -3,8 +3,7 @@
     %h3.panel-title= product.name
   .panel-body
     .col-md-6= image_tag product.image, size: '300x300'
-    .row
-      = product.description
-      %h2= number_to_currency(product.price)
-      - if product.available?
-        = link_to 'Add to Cart', '#', class: 'btn btn-danger'
+    = product.description
+    %h2= number_to_currency(product.price)
+    - if product.available?
+      = link_to 'Add to Cart', '#', class: 'btn btn-danger'
