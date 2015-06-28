@@ -1,0 +1,21 @@
+%h1.col-md-8.col-md-offset-2.panel.panel-default
+  .row.panel-heading
+    .col-md-4= gravatar_for(user)
+    .col-md-4.user_name= user.name
+  .row.panel-body
+    .col-md-4
+      - if user.admin?
+        %p.badge Admin user
+      - else
+        %p.badge Regular user
+      %p.user_mail= mail_to user.email
+    .col-md-4.pull-right
+      %p.user_sign_in
+        - if user.last_sign_in_at
+          Last seen #{ time_ago_in_words(user.last_sign_in_at) } ago.
+        - else
+          User hasn't been active recently
+
+  %hr
+  %p.text-center User cart
+  = render partial: 'shared/cart'

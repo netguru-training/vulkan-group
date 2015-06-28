@@ -1,0 +1,15 @@
+%table.row.table.table-striped.user_products
+  .col-md-12
+    - products.each do |product|
+      %tr
+        %td= link_to product.name, category_product_path(product.category, product)
+        %td= truncate(product.description, separator: ' ')
+        %td= link_to product.category.name, category_path(product.category)
+        %td= number_to_currency(product.price)
+    %tr
+      %td Sum
+      %td
+      %td
+      %td= number_to_currency(user.cart.cart_price)
+
+= link_to 'Checkout', '#', class: 'btn btn-success pull-right'
