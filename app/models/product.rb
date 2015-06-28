@@ -21,6 +21,23 @@ class Product < ActiveRecord::Base
     stock > 0
   end
 
+  class << self
+    delegate :search, to: :__elasticsearch__ unless respond_to?(:search)
+  end
+
+  def self.search(query)
+    __elasticsearch__.search(
+    {
+      query: {
+        multi_match: {
+          query: query,
+          fields: ['name', 'description']
+        }
+      }
+    }
+  )
+  end
+
   private
 
     def self.random_products
