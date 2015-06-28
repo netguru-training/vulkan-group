@@ -20,7 +20,7 @@ class Product < ActiveRecord::Base
   private
 
     def self.random_products
-      order("RANDOM()").first(3)
+      order("RANDOM()")
     end
 
     def image_size
