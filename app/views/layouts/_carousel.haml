@@ -10,7 +10,7 @@
 
     - products.each_with_index do |product, index|
       .item{ class: (index == 0) ? 'active' : nil }
-        %img{:alt => "...", :src => product.image.url }
+        %img{:alt => "...", :src => product.image }
         .carousel-caption
 
   / Controls
