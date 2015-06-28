@@ -1,16 +1,3 @@
-%h1.text-center Cart
-%table.table.table-striped
-  %tr
-    %th Product name
-    %th Quantity
-    %th Price
-    %th Total price
-    %th
-  - products.each do |product|
-    %tr
-      %td= link_to product.name, category_product_path(product.category_id, product)
-      %td= cart.get_qty(product.id)
-      %td= number_to_currency(product.price)
-      %td= number_to_currency cart.total_price(product.id)
-      %td.glyphicon.glyphicon-trash
-= link_to 'Place order', new_order_path, class: 'btn btn-success'
+%h1.col-md-10.col-md-offset-1.panel.panel-default
+  %p.text-center.panel-heading Cart
+  = render partial: 'shared/cart'
