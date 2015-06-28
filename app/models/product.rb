@@ -25,13 +25,24 @@ class Product < ActiveRecord::Base
     delegate :search, to: :__elasticsearch__ unless respond_to?(:search)
   end
 
-  def self.search(query)
+  def self.search(search_term)
     __elasticsearch__.search(
     {
       query: {
-        multi_match: {
-          query: query,
-          fields: ['name', 'description']
+        filtered: {
+            filter: {
+                bool: {
+                    should: [
+                        {
+                            query: {
+                                wildcard: {
+                                    "name": "*" + search_term + "*"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
         }
       }
     }

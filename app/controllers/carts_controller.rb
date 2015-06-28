@@ -1,9 +1,9 @@
-class CartsController < ApplicationController
+  class CartsController < ApplicationController
   before_action :authenticate_user!
-  expose(:cart)
+  expose(:cart) { current_cart }
+  expose(:products) { current_cart.products }
 
   def show
-    @cart = current_cart
   end
 
   def add_to_cart
