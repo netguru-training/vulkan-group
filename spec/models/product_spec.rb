@@ -1,10 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
+  let(:category) { Category.create(name: "Veggies") }
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:price) }
   it { should validate_presence_of(:description) }
   it { should validate_presence_of(:stock) }
+  it { should validate_presence_of(:category_id) }
 
   it { should validate_numericality_of(:price) }
   it { should validate_numericality_of(:stock) }
@@ -17,7 +19,8 @@ RSpec.describe Product, type: :model do
       Product.new(
         name: 'Glass',
         description: 'Test description',
-        stock: 2
+        stock: 2,
+        category_id: category.id
       )}
 
     it 'is limited to two decimal places' do
@@ -41,7 +44,8 @@ RSpec.describe Product, type: :model do
       Product.new(
         name: 'Glass',
         description: 'Test description',
-        price: 11.11
+        price: 11.11,
+        category_id: category.id
       )}
 
     it 'is limited to positive integer value' do
