@@ -10,4 +10,8 @@ class Cart < ActiveRecord::Base
     product.save
     save
   end
+
+  def cart_price
+    products.sum(:price)
+  end
 end

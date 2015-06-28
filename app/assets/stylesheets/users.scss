@@ -1,0 +1,22 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user_sign_in{
+  font-size: 0.5em;
+  color: $gray-light;
+  margin-top: 20px;
+}
+.user_mail{
+  font-size: 0.5em;
+}
+.user_name{
+  line-height: 150px;
+}
+.gravatar{
+  padding: 10px;
+}
+.user_products{
+  font-size: 0.5em;
+  margin: auto;
+}

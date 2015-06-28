@@ -3,7 +3,7 @@
   %p
     = f.label "Name"
     = text_field_tag :q, params[:q]
-    = submit_tag "Search", name: nil
+    = submit_tag "Search"
 - unless @products.empty?
   %table.table.table-striped
     %thead

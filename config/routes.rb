@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :users, only: [:show]
+
   resources :categories, only: [:index, :show] do
     resources :products, only: [:index, :show]
   end
