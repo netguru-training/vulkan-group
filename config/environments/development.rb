@@ -41,4 +41,9 @@ Rails.application.configure do
 
   # Devise mailer for development
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  Braintree::Configuration.environment = :sandbox
+  Braintree::Configuration.merchant_id = "sdr7t8syn9t2hjjw"
+  Braintree::Configuration.public_key = "xg9nrpp4nrkdtcn7"
+  Braintree::Configuration.private_key = "127aaf560cc1d44110ee7eaf23b3d328"
 end
