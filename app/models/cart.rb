@@ -20,11 +20,19 @@ class Cart < ActiveRecord::Base
   end
 
   def cart_price
-    products.sum(:price)
+    cart_sum = 0
+    products.each do |product|
+      cart_sum += total_price(product.id)
+    end
+    cart_sum
   end
 
   def get_qty(product_id)
     product_quantity[product_id.to_s]
+  end
+
+  def total_price(product_id)
+    product_quantity[product_id.to_s] * products.find(product_id).price
   end
 
 end
