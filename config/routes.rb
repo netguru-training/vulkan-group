@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :users, only: [:show]
 
   resources :categories, only: [:index, :show] do
@@ -13,7 +14,6 @@ Rails.application.routes.draw do
 
   root 'static_pages#index'
   ActiveAdmin.routes(self)
-  devise_for :users
 
   get 'search', to: 'search#search'
 end
