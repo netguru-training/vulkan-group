@@ -1,0 +1,26 @@
+%h1 Products Search
+= form_for search_path, method: :get do |f|
+  %p
+    = f.label "Name"
+    = text_field_tag :q, params[:q]
+    = submit_tag "Search", name: nil
+- unless @products.empty?
+  %table.table.table-striped
+    %thead
+      %tr
+        %th Name
+        %th Description
+        %th Price
+        %th Stock
+        %th
+    %tbody
+      - @products.each do |product|
+        %tr
+          %td= product.name
+          %td= product.description
+          %td= number_to_currency product.price
+          %td= product.stock
+          %td
+            .pull-right
+              = link_to 'Show', category_product_path(product.category_id, product), class: "btn btn-primary"
+

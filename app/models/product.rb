@@ -1,4 +1,8 @@
+require 'elasticsearch/model'
+
 class Product < ActiveRecord::Base
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
   mount_uploader :image, ImageUploader
   belongs_to :category
   belongs_to :cart
@@ -29,3 +33,4 @@ class Product < ActiveRecord::Base
       errors.add(:image, msg) if image.size > upload_limit.megabyte
     end
 end
+Product.import
