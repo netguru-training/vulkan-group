@@ -52,7 +52,7 @@ class Product < ActiveRecord::Base
   private
 
     def self.random_products
-      order("RANDOM()")
+      where.not('image' => nil).order("RANDOM()")
     end
 
     def image_size

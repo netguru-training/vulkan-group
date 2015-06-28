@@ -9,8 +9,8 @@
   .carousel-inner{:role => "listbox"}
 
     - products.each_with_index do |product, index|
-      .item{ class: (index == 0) ? 'active' : nil }
-        %img{:alt => "...", :src => product.image }
+      .item.carousel_item{ class: (index == 0) ? 'active' : nil }
+        %img{:alt => product.name, :src => product.image }
         .carousel-caption
 
   / Controls
