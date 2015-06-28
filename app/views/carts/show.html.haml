@@ -11,6 +11,10 @@
       %td= link_to product.name, category_product_path(product.category_id, product)
       %td= cart.get_qty(product.id)
       %td= number_to_currency(product.price)
+<<<<<<< HEAD
       %td= number_to_currency(total_price(product, cart))
+=======
+      %td= number_to_currency cart.total_price(product.id)
+>>>>>>> 6be9725ff568bff61e82c48530ae68fd42f750cf
       %td.glyphicon.glyphicon-trash
 = link_to 'Place order', new_order_path, class: 'btn btn-success'
