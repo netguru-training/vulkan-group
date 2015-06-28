@@ -19,6 +19,17 @@ class Cart < ActiveRecord::Base
     save
   end
 
+  def remove_product(product_id)
+    product = Product.find(product_id)
+    self.product_quantity[product_id] -= 1
+    product.stock += 1
+    product.save
+    if self.product_quantity[product_id] < 1
+      products.find(product_id).delete
+    end
+    save
+  end
+
   def cart_price
     cart_sum = 0
     products.each do |product|
