@@ -1,0 +1,11 @@
+.form
+  %h2 Please Enter Your Details
+  = form_for order do |f|
+    .form-group
+      = f.label :address
+      = f.text_field :address, class: 'form-control'
+    .form-group
+      = f.label :email
+      = f.email_field :email, class: 'form-control'
+    = f.submit 'Checkout', class: 'btn btn-success'
+    = link_to 'Cancel', order, class: 'btn btn-warning', method: :delete

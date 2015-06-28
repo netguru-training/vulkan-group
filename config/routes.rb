@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   end
   resource :cart, only: [:show]
 
+  resources :orders, only: [:new, :create, :destroy]
+
   post '/add_to_cart/:product_id' => 'carts#add_to_cart', :as => 'add_to_cart'
 
   root 'static_pages#index'
