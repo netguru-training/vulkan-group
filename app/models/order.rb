@@ -6,8 +6,7 @@ class Order < ActiveRecord::Base
 
   validates :email,
             length: { maximum: 50, allow_nil: false },
-            format: { with: /\A[\w+\-.]+@[a-z\d\-.]+[a-z]+\z/i },
-            uniqueness: { case_sensitive: false }
+            format: { with: /\A[\w+\-.]+@[a-z\d\-.]+[a-z]+\z/i }
 
   def total_price
     products.sum(:price) if self.products.count > 0

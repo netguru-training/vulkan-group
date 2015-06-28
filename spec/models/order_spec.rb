@@ -9,7 +9,6 @@ RSpec.describe Order, type: :model do
   describe 'email validations' do
     subject { Order.create(email: 'goodemail@example.com', address: 'address') }
     it { should ensure_length_of(:email).is_at_most(50) }
-    it { should validate_uniqueness_of(:email) }
 
     context 'email format' do
       let(:valid_email) { 'goodemail@example.com' }
