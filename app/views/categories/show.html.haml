@@ -4,8 +4,10 @@
     %th Product name
     %th Description
     %th Price
+    %th
   - category.products.each do |product|
     %tr
       %td= link_to product.name, category_product_path(category, product)
       %td= truncate(product.description, separator: ' ')
       %td= number_to_currency(product.price)
+      %td= link_to 'Add to Cart', add_to_cart_path(product_id: product), class: 'btn btn-success', method: :post

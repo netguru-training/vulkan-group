@@ -6,6 +6,6 @@
     = product.description
     %h2= number_to_currency(product.price)
     - if product.available?
-      = link_to 'Add to Cart', add_to_cart_path(product_id: product), class: 'btn btn-danger', method: :post
+      = link_to 'Add to Cart', add_to_cart_path(product_id: product), class: 'btn btn-success', method: :post
       %hr
       = social_share_button_tag(product.name, popup: "true", url: request.original_url)
