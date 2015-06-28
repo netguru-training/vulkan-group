@@ -36,7 +36,7 @@ class Product < ActiveRecord::Base
                         {
                             query: {
                                 wildcard: {
-                                    "name": "*" + search_term + "*"
+                                    "name": "*" + search_term.downcase + "*"
                                 }
                             }
                         }
