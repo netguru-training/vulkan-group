@@ -18,7 +18,6 @@ class OrdersController < ApplicationController
     order.user_id = current_user.id
 
     if order.save
-      order.status = 'saved'
       cart.order_id = order.id
       cart.save
       cart.products.destroy_all
