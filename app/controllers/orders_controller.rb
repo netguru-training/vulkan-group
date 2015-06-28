@@ -16,6 +16,7 @@ class OrdersController < ApplicationController
   def create
     order = Order.new(order_params)
     order.user_id = current_user.id
+    order.total_price = cart.cart_price
 
     if order.save
       cart.order_id = order.id
