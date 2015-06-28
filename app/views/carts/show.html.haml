@@ -1,1 +1,13 @@
 %h1.text-center Cart
+%table.table.table-striped
+  %tr
+    %th Product name
+    %th Quantity
+    %th Price
+    %th
+  - @cart.products.each do |product|
+    %tr
+      %td= link_to product.name, category_product_path(product.category_id, product)
+      %td
+      %td= number_to_currency(product.price)
+      %td.glyphicon.glyphicon-trash

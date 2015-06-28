@@ -6,4 +6,4 @@
     = product.description
     %h2= number_to_currency(product.price)
     - if product.available?
-      = link_to 'Add to Cart', '#', class: 'btn btn-danger'
+      = link_to 'Add to Cart', add_to_cart_path(product_id: product), class: 'btn btn-danger', method: :post
