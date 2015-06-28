@@ -7,11 +7,13 @@
         %td= link_to product.category.name, category_path(product.category)
         %td= number_to_currency(product.price)
         %td
-          = link_to '-', remove_from_cart_path(product_id: product), id: "minus", method: :post
+          = link_to '-', decrement_from_cart_path(product_id: product), id: "minus", method: :post
           = cart.get_qty(product.id)
           = link_to '+', add_to_cart_path(product_id: product), id: "plus", method: :post
         %td= number_to_currency cart.total_price(product.id)
-        %td.glyphicon.glyphicon-trash.text-center
+        %td
+          = link_to delete_from_cart_path(product_id: product), method: :post do
+            %span.glyphicon.glyphicon-trash
     %tr
       %td Sum
       %td

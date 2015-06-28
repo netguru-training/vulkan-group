@@ -19,7 +19,7 @@ class Cart < ActiveRecord::Base
     save
   end
 
-  def remove_product(product_id)
+  def decrement_product(product_id)
     product = Product.find(product_id)
     self.product_quantity[product_id] -= 1
     product.stock += 1
@@ -27,6 +27,14 @@ class Cart < ActiveRecord::Base
     if self.product_quantity[product_id] < 1
       products.find(product_id).delete
     end
+    save
+  end
+
+  def delete_product(product_id)
+    product = Product.find(product_id)
+    product.stock += self.product_quantity[product_id]
+    product.save
+    products.find(product_id).delete
     save
   end
 
