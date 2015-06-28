@@ -34,6 +34,8 @@ gem 'simple_form'
 gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+gem 'braintree'
+gem 'gon'
 
 group :development do
   gem 'html2haml'
