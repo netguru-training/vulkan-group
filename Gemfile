@@ -42,3 +42,4 @@ end
 
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'social-share-button'
