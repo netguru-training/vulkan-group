@@ -16,7 +16,7 @@ class OrdersController < ApplicationController
   def create
     order = Order.new(order_params)
     order.user_id = current_user.id
-    order.total_price = cart.cart_price
+    order.price = cart.cart_price
 
     if order.save
       cart.order_id = order.id
@@ -30,6 +30,7 @@ class OrdersController < ApplicationController
 
   def destroy
     order.destroy
+    redirect_to root_url, notice: 'Your order has been cancelled.'
   end
 
   private
