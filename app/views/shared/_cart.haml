@@ -8,9 +8,9 @@
         %td= number_to_currency(product.price)
         %td
           .list-inline
-            = link_to '-', decrement_from_cart_path(product_id: product), id: "minus", method: :post
-            = cart.get_qty(product.id)
-            = link_to '+', add_to_cart_path(product_id: product), id: "plus", method: :post
+            = link_to '-', decrement_from_cart_path(product_id: product), id: "minus", remote: true, method: :post
+            %span#value= cart.get_qty(product.id)
+            = link_to '+', add_to_cart_path(product_id: product), id: "plus", remote: true, method: :post
         %td= number_to_currency cart.total_price(product.id)
         %td
           = link_to delete_from_cart_path(product_id: product), method: :post do
