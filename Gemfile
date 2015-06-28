@@ -32,6 +32,8 @@ gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
 gem 'activeadmin', '~> 1.0.0.pre1'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 
 group :development do
   gem 'html2haml'
