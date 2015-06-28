@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
   expose(:cart)
 
   def new
+    cart = Cart.find_by(user_id: current_user.id)
     if cart.products.empty?
       redirect_to root_url, notice: "Your cart is empty" and return
     end
