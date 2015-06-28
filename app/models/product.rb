@@ -2,7 +2,7 @@ class Product < ActiveRecord::Base
   mount_uploader :image, ImageUploader
   belongs_to :category
   belongs_to :cart
-  validates_presence_of :name, :description, :price, :stock
+  validates_presence_of :name, :description, :price, :stock, :category_id
 
   validates_numericality_of :price, greater_than_or_equal_to: 0.01
   validates_numericality_of :stock,
