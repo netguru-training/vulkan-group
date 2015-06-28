@@ -5,11 +5,19 @@
 @import "social-share-button";
 
 .navbar-brand{
-  line-height: 60px;
+  line-height: 30px;
+  font-size: 2em;
+  a:active, a:hover, a:visited, a:link{
+    color: $gray;
+    text-decoration: none;
+  }
 }
 .navbar-right .btn{
-  margin: 10px;
+  margin: 5px;
 }
-.navbar-left .btn{
-  margin: 10px;
+.search-field{
+  line-height: 55px;
+}
+.checkout-btn{
+  margin: 20px 0;
 }

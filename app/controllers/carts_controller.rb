@@ -2,6 +2,7 @@
   before_action :authenticate_user!
   expose(:cart) { current_cart }
   expose(:products) { current_cart.products }
+  expose(:user) { current_user }
 
   def show
   end
