@@ -1,4 +1,4 @@
-### Vulkan-group
+# Vulkan-group
 
 ## General information
 
@@ -19,7 +19,7 @@
 
 ## Setup (Debian based distributions)
 
-# Basic setup
+### Basic setup
 
 Clone repository:
 ```sh
@@ -47,14 +47,14 @@ login: admin@example.com
 password: password
 ```
 
-# ImageMagick
+### ImageMagick
 
 Simply type the following command to start ImageMagick installation:
 ```sh
 sudo apt-get install libmagickwand-dev imagemagick
 ```
 
-# Braintree
+### Braintree
 
 Create sandbox account on Braintree:
 
@@ -62,7 +62,7 @@ https://www.braintreepayments.com/get-started
 
 then change api keys and merchant id in config/environments/development.rb file
 
-# Elasticsearch
+### Elasticsearch
 
 Download script from website:
 
