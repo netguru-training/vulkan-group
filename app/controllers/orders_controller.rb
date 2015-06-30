@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
     if order.save
       cart.order_id = order.id
       cart.save
-      cart.products.destroy_all
+      cart.destroy
       redirect_to new_order_transaction_url(order.id), notice: 'Thank you for your order.'
     else
       render :new
