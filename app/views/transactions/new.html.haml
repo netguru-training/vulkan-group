@@ -1,8 +1,8 @@
 %h2 New Transaction
-= form_tag order_transactions_path do
+= form_tag order_transaction_path do
   %p Please enter your payment details:
   #dropin
-  = submit_tag "Pay", class: "btn btn-default"
+  = submit_tag "Pay #{number_to_currency order.price}", class: "btn btn-default"
 
 
 

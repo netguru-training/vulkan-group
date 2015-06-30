@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :orders, only: [:new, :create, :destroy] do
-    resources :transactions, only: [:new, :create]
+    resource :transaction, only: [:new, :create]
   end
 
   post '/add_to_cart/:product_id' => 'carts#add_to_cart', :as => 'add_to_cart'

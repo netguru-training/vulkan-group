@@ -1,13 +1,15 @@
 class TransactionsController < ApplicationController
   before_action :authenticate_user!
 
+  expose(:order) { Order.find(params[:order_id]) }
+
   def new
     gon.client_token = generate_client_token
   end
 
   def create
     @result = Braintree::Transaction.sale(
-              amount: 100,
+              amount: order.price,
               payment_method_nonce: params[:payment_method_nonce])
     if @result.success?
       redirect_to root_url, notice: "Congraulations! Your transaction has been successfully!"
