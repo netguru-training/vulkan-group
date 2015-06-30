@@ -1,9 +1,8 @@
 $ ->
-  $("#plus").on "ajax:success", (e, data, status, xhr) ->
-    currentValue = $("#value").text();
-    newValue = +currentValue + 1;
-    $("#value").text(newValue);
-  $("#minus").on "ajax:success", (e, data, status, xhr) ->
-    currentValue = $("#value").text();
-    newValue = +currentValue - 1;
-    $("#value").text(newValue);
+  $("a[data-product]").on "ajax:success", (e, data, status, xhr) ->
+    if data == 0
+      $(this).closest('tr').remove()
+    else
+      productId = $(this).data('product')
+      tagId = "#value_product_".concat(productId)
+      $(tagId).text(data)
