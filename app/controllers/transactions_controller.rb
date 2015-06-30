@@ -12,6 +12,7 @@ class TransactionsController < ApplicationController
               amount: order.price,
               payment_method_nonce: params[:payment_method_nonce])
     if @result.success?
+      order.change_status('paid')
       redirect_to root_url, notice: "Congraulations! Your transaction has been successfully!"
     else
       flash[:alert] = "Something went wrong while processing your transaction. Please try again!"

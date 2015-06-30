@@ -15,4 +15,9 @@ class Order < ActiveRecord::Base
   def total_discount(discount_percentage)
     total_price * (discount_percentage / 100) unless total_price.nil?
   end
+
+  def change_status(status)
+    self.status = status
+    save
+  end
 end
